@@ -63,7 +63,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const genres = getGenres();
     const genre = genres.find(g => g.id === context.params.id);
-    
+
     if (!genre) {
         return {
             notFound: true,
